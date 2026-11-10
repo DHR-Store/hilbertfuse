@@ -6,7 +6,7 @@ Pretrained models for 8 real cancer data sets, a quick way to train your own mod
 
 ## Start in one step
 ```powershell
-git clone https://github.com/<your-user>/hilbertfuse.git
+git clone https://github.com/DHR-Store/hilbertfuse.git
 cd hilbertfuse
 .\start_windows.bat            # Windows (double-click works too)   |   Linux/macOS: bash start.sh
 ```
