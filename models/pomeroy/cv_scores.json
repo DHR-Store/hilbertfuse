@@ -1,0 +1,13 @@
+{
+  "model": "pomeroy",
+  "task": "CNS embryonal tumor outcome (hard)",
+  "samples": 60,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 0.6,
+  "cv_accuracy_std": 0.16029486718059455,
+  "cv_macro_f1": 0.5392626963679595,
+  "logreg_cv_accuracy": 0.6166666666666667,
+  "majority_baseline": 0.65,
+  "not_useful": true
+}

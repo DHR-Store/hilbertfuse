@@ -1,0 +1,198 @@
+{
+  "version": "2.0.0",
+  "options": {
+    "cwd": "${workspaceFolder}"
+  },
+  "inputs": [
+    {
+      "id": "modelName",
+      "type": "promptString",
+      "description": "Model folder name inside models/ (e.g. golub, gordon, khan, mymodel)",
+      "default": "golub"
+    },
+    {
+      "id": "inputFile",
+      "type": "promptString",
+      "description": "Your samples CSV (rows = samples, columns = genes)",
+      "default": "my.csv"
+    },
+    {
+      "id": "outFile",
+      "type": "promptString",
+      "description": "Where to save predictions",
+      "default": "predictions.csv"
+    },
+    {
+      "id": "labeledFile",
+      "type": "promptString",
+      "description": "Labeled samples CSV (has a label column)",
+      "default": "my_labeled.csv"
+    },
+    {
+      "id": "trainFile",
+      "type": "promptString",
+      "description": "Your training CSV (genes + label column)",
+      "default": "my_data.csv"
+    },
+    {
+      "id": "labelCol",
+      "type": "promptString",
+      "description": "Name of the label column",
+      "default": "label"
+    },
+    {
+      "id": "newModel",
+      "type": "promptString",
+      "description": "Name for your new model",
+      "default": "mymodel"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "HilbertFuse: menu",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "menu"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "HilbertFuse: predict",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "predict",
+        "--model",
+        "models/${input:modelName}",
+        "--input",
+        "${input:inputFile}",
+        "--out",
+        "${input:outFile}"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "HilbertFuse: evaluate",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "evaluate",
+        "--model",
+        "models/${input:modelName}",
+        "--test",
+        "${input:labeledFile}",
+        "--label-col",
+        "${input:labelCol}"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "HilbertFuse: train my model",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "train",
+        "--train",
+        "${input:trainFile}",
+        "--label-col",
+        "${input:labelCol}",
+        "--out",
+        "models/${input:newModel}"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "HilbertFuse: honest accuracy (cross-validation)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "cv",
+        "--data",
+        "${input:trainFile}",
+        "--label-col",
+        "${input:labelCol}",
+        "--folds",
+        "5",
+        "--preset",
+        "fuse"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "HilbertFuse: heat maps",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/Scripts/hilbertfuse.exe",
+      "args": [
+        "heatmap",
+        "--model",
+        "models/${input:modelName}",
+        "--data",
+        "${input:inputFile}",
+        "--out",
+        "heatmaps"
+      ],
+      "linux": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "osx": {
+        "command": "${workspaceFolder}/.venv/bin/hilbertfuse"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

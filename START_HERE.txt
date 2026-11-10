@@ -1,0 +1,22 @@
+HILBERTFUSE - START HERE
+
+WINDOWS:   double-click  start_windows.bat
+           (first run installs everything, 5-10 minutes, internet needed; needs Python 3.10-3.12 with "Add to PATH")
+LINUX/MAC: bash start.sh
+
+You get a menu:
+  1 list trained models          4 train my own model (choose quick / fast / full)
+  7 show ALL scores of the trained models
+  8 heat maps (gene image + top genes)   (or:  hilbertfuse scores)
+  2 predict (give samples)       5 honest accuracy of my data (cross-validation)
+  3 evaluate (give labeled data) 6 which genes did the model use
+
+Your CSV file: one row per sample, one column per gene, plus a "label" column for evaluate/train.
+Tip: in the menu you can drag a file into the window to paste its path.
+
+Direct commands (no menu):   start_windows.bat predict --model models\golub --input my.csv --out out.csv
+Read before trusting any model: models\<name>\MODEL_CARD.md and docs\USE_MODELS.md
+Research use only. The models do not find the cause of a cancer and must not be used to diagnose patients.
+
+VS CODE (Windows): open the folder, open a terminal, run  .\.venv\Scripts\Activate.ps1  then  hilbertfuse predict --model models\golub --input my.csv --out predictions.csv
+Or Terminal > Run Task > "HilbertFuse: ..."  Details: docs\VSCODE.md

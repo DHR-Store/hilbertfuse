@@ -1,0 +1,35 @@
+{
+  "kind": "single",
+  "backbone": "hilbertfusenet",
+  "n_genes": 1024,
+  "input_size": 96,
+  "dropout": 0.2,
+  "classes": [
+    "adenocarcinoma",
+    "mesothelioma"
+  ],
+  "train_config": {
+    "epochs": 80,
+    "batch_size": 16,
+    "lr": null,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.1,
+    "class_balance": "loss",
+    "val_fraction": null,
+    "mixup_alpha": 0.3,
+    "patience": 8,
+    "gene_dropout": 0.1,
+    "noise_std": 0.02,
+    "warmup_epochs": 1,
+    "amp": false,
+    "num_workers": 0,
+    "seed": 0,
+    "verbose": false
+  },
+  "transpose": false,
+  "random_state": 0,
+  "channels": "multi",
+  "layout": "hilbert",
+  "selection": "mi_rd",
+  "model_kwargs": {}
+}

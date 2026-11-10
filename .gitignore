@@ -1,0 +1,15 @@
+# environments / build
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# your outputs (may contain patient-derived results - never commit these)
+runs/
+bench*/
+explain_out/
+predictions*.csv
+*_predictions.csv
+# private data: put patient / cancer data files here, they are never committed
+data_private/
+*.private.csv
+*.private.csv.gz

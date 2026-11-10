@@ -1,0 +1,19 @@
+{
+  "dataset": "pomeroy",
+  "n_samples": 60,
+  "n_genes_in_file": 7128,
+  "classes": [
+    "died",
+    "survived"
+  ],
+  "class_counts": {
+    "survived": 39,
+    "died": 21
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "CNS embryonal tumor outcome (hard)",
+  "citation": "Pomeroy et al. 2002 Nature"
+}

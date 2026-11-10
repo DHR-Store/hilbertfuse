@@ -1,0 +1,13 @@
+{
+  "model": "golub",
+  "task": "ALL vs AML leukemia",
+  "samples": 72,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 0.9447619047619048,
+  "cv_accuracy_std": 0.05640395283747061,
+  "cv_macro_f1": 0.9400534759358289,
+  "logreg_cv_accuracy": 0.9866666666666667,
+  "majority_baseline": 0.6527777777777778,
+  "not_useful": false
+}

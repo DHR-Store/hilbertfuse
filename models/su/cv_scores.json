@@ -1,0 +1,13 @@
+{
+  "model": "su",
+  "task": "4 carcinoma tissue types",
+  "samples": 102,
+  "classes": 4,
+  "folds": 5,
+  "cv_accuracy": 0.9523809523809523,
+  "cv_accuracy_std": 0.06734350297014739,
+  "cv_macro_f1": 0.9473901098901099,
+  "logreg_cv_accuracy": 0.980952380952381,
+  "majority_baseline": 0.27450980392156865,
+  "not_useful": false
+}

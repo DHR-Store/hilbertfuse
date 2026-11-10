@@ -1,0 +1,19 @@
+{
+  "dataset": "golub",
+  "n_samples": 72,
+  "n_genes_in_file": 7129,
+  "classes": [
+    "ALL",
+    "AML"
+  ],
+  "class_counts": {
+    "ALL": 47,
+    "AML": 25
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "ALL vs AML leukemia",
+  "citation": "Golub et al. 1999 Science"
+}

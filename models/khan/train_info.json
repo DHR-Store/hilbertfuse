@@ -1,0 +1,23 @@
+{
+  "dataset": "khan",
+  "n_samples": 63,
+  "n_genes_in_file": 2308,
+  "classes": [
+    "BL",
+    "EWS",
+    "NB",
+    "RMS"
+  ],
+  "class_counts": {
+    "EWS": 23,
+    "RMS": 20,
+    "NB": 12,
+    "BL": 8
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "4 small round blue cell tumors (SRBCT)",
+  "citation": "Khan et al. 2001 Nat Med"
+}

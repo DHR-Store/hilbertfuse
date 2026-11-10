@@ -1,0 +1,23 @@
+{
+  "dataset": "su",
+  "n_samples": 102,
+  "n_genes_in_file": 5565,
+  "classes": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "class_counts": {
+    "3": 28,
+    "2": 26,
+    "1": 25,
+    "4": 23
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "4 carcinoma tissue types",
+  "citation": "Su et al. 2001 Cancer Res"
+}

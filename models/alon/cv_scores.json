@@ -1,0 +1,13 @@
+{
+  "model": "alon",
+  "task": "colon tumor vs normal",
+  "samples": 62,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 0.7935897435897437,
+  "cv_accuracy_std": 0.09851794591506732,
+  "cv_macro_f1": 0.7638795518207282,
+  "logreg_cv_accuracy": 0.826923076923077,
+  "majority_baseline": 0.6451612903225806,
+  "not_useful": false
+}

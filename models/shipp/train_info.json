@@ -1,0 +1,19 @@
+{
+  "dataset": "shipp",
+  "n_samples": 77,
+  "n_genes_in_file": 7129,
+  "classes": [
+    "DLBCL",
+    "FL"
+  ],
+  "class_counts": {
+    "DLBCL": 58,
+    "FL": 19
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "DLBCL vs follicular lymphoma",
+  "citation": "Shipp et al. 2002 Nat Med"
+}

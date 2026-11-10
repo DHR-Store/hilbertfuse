@@ -1,0 +1,13 @@
+{
+  "model": "gordon",
+  "task": "lung: mesothelioma vs adenocarcinoma",
+  "samples": 181,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 1.0,
+  "cv_accuracy_std": 0.0,
+  "cv_macro_f1": 1.0,
+  "logreg_cv_accuracy": 0.9944444444444445,
+  "majority_baseline": 0.8287292817679558,
+  "not_useful": false
+}

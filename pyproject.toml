@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hilbertfuse"
+version = "1.0.0"
+description = "HilbertFuseNet: leak-free, layout-aware gene-image CNN fused with a tuned linear model for omics classification, with benchmark on real cancer datasets"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "scikit-learn>=1.2",
+  "joblib>=1.2",
+  "torch>=2.0",
+  "torchvision>=0.15",
+  "scipy>=1.9",
+  "matplotlib>=3.5",
+  "tabulate",
+]
+
+[project.optional-dependencies]
+parquet = ["pyarrow"]
+datasets = ["rdata"]
+dev = ["pytest"]
+
+[project.scripts]
+hilbertfuse = "hilbertfuse.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

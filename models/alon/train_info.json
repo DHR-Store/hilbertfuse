@@ -1,0 +1,19 @@
+{
+  "dataset": "alon",
+  "n_samples": 62,
+  "n_genes_in_file": 2000,
+  "classes": [
+    "n",
+    "t"
+  ],
+  "class_counts": {
+    "t": 40,
+    "n": 22
+  },
+  "preset": "fuse",
+  "epochs": 80,
+  "n_genes_used": 1024,
+  "seed": 0,
+  "task": "colon tumor vs normal",
+  "citation": "Alon et al. 1999 PNAS"
+}

@@ -1,0 +1,13 @@
+{
+  "model": "singh",
+  "task": "prostate tumor vs normal",
+  "samples": 102,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 0.9323809523809523,
+  "cv_accuracy_std": 0.06445304501214717,
+  "cv_macro_f1": 0.9318741187619907,
+  "logreg_cv_accuracy": 0.9123809523809523,
+  "majority_baseline": 0.5098039215686274,
+  "not_useful": false
+}

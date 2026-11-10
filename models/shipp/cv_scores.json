@@ -1,0 +1,13 @@
+{
+  "model": "shipp",
+  "task": "DLBCL vs follicular lymphoma",
+  "samples": 77,
+  "classes": 2,
+  "folds": 5,
+  "cv_accuracy": 0.9199999999999999,
+  "cv_accuracy_std": 0.11925695879998881,
+  "cv_macro_f1": 0.8977272727272727,
+  "logreg_cv_accuracy": 0.9200000000000002,
+  "majority_baseline": 0.7532467532467533,
+  "not_useful": false
+}

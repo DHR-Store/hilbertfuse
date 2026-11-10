@@ -1,0 +1,13 @@
+{
+  "model": "khan",
+  "task": "4 small round blue cell tumors (SRBCT)",
+  "samples": 63,
+  "classes": 4,
+  "folds": 5,
+  "cv_accuracy": 1.0,
+  "cv_accuracy_std": 0.0,
+  "cv_macro_f1": 1.0,
+  "logreg_cv_accuracy": 0.9771062271062272,
+  "majority_baseline": 0.36507936507936506,
+  "not_useful": false
+}
